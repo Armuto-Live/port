@@ -24,10 +24,10 @@ export const Navbar = () => {
       <nav>
         <ul className="nav-items">
           <NavItem href="#inicio" texto="Inicio" imagen={iconInicio} />
-          <NavItem href="#sobre-mi" texto="Sobre mi" imagen={iconSobreMi} />
           <NavItem href='#proyectos' texto="Proyectos" imagen={iconProyectos} />
           <NavItem href="#experiencia" texto="Experiencia" imagen={iconEducacion} />
-          <NavItem texto="Contáctame" imagen={iconContacto} />
+          <NavItem href="#sobre-mi" texto="Sobre mi" imagen={iconSobreMi} />
+          <NavItem href='#contacto' texto="Contáctame" imagen={iconContacto} />
         </ul>
       </nav>
     </header>

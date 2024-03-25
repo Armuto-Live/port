@@ -1,15 +1,26 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import Image from "../../assets/sobre-mi.jpg";
 
-import { projects } from "../../constants/project";
 import { Boton } from "../Boton";
 
 export const Proyectos = () => {
+  const [proyectos,setProyectos ] = useState([])
+
+  const consultarAPI= async()=>{
+    const jsonData= await fetch("https://65fb5b4d14650eb21009dbce.mockapi.io/proyectos");
+    const data=await jsonData.json();
+    setProyectos(data);
+  }
+
+  useEffect(()=>{
+    consultarAPI();
+  },[])
+
   return (
     <section id="proyectos" className="proyectos">
       <h2 className="proyectos-titulo">Proyectos</h2>
       <div className="tarjetas">
-        {projects.map((project) => {
+        {proyectos.map((project) => {
           return (
             <article key={project.id} className="tarjeta">
               <div className="tarjeta-interior">

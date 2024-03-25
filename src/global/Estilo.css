@@ -314,6 +314,7 @@ section:nth-child(n + 2) {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
 }
 .tarjeta {
   width: 250px;
@@ -630,10 +631,10 @@ form button {
     right: 0;
     z-index: 333;
     padding: 1rem 2rem;
-    transition: all 0.6s ease-in-out;
   }
   .header.sticky {
     background-color: var(--fondo);
+    transition: all 0.6s ease-in-out;
     padding: 1rem 2rem;
   }
   .header-logo {
